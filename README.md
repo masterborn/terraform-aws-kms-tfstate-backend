@@ -21,7 +21,10 @@
 | [aws_kms_alias.state](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
 | [aws_kms_key.state](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 | [aws_s3_bucket.bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket_acl.acl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl) | resource |
 | [aws_s3_bucket_public_access_block.bucket-acl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.state_encryption](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_s3_bucket_versioning.state_versioning](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -43,7 +46,7 @@
 ### Basic example
 ```hcl
 module "string_ssm_keys" {
-  source              = "git@github.com:masterborn/terraform-kms-tfstate-backend.git?ref=v1.0.0"
+  source              = "git@github.com:masterborn/terraform-kms-tfstate-backend.git?ref=v1.0.1"
   bucket_name         = "example-state-bucket"
   dynamodb_table_name = "example-state-lock"
 
